@@ -4,12 +4,17 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}"
   ],
   theme: {
-    colors:{
-      transparent: 'transparent',
-      current: 'currentColor',
-      'lightred': '#F55A5A',
+    
+    extend: {
+      colors:{
+        transparent: 'transparent',
+        current: 'currentColor',
+        'lightred': '#F55A5A',
+      },
+      fontFamily:{
+        'TextFont':['Inter','sans-serif'],
     },
-    extend: {},
   },
   plugins: [],
+}
 }

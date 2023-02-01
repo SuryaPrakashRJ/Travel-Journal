@@ -1,12 +1,22 @@
 import './App.css';
+import Header from './components/header';
+import Card from './components/card'
+import {details} from './details';
 
 function App() {
+  const cards= details.map(item =>{
+    return(
+      <Card
+      {...item}
+      />
+    )
+  })
   return (
     <div className="App">
-      <div className="header flex bg-lightred justify-center space-x-4 py-10">
-        <img src="globe-icon.svg" alt="globe-icon"></img>
-        <h3 className='text-3'>my travel journal</h3>
-      </div>
+      <Header/>
+      <section className='justify-center grid'>
+        {cards}
+      </section>
     </div>
   );
 }
